@@ -49,8 +49,6 @@ class ComicsController extends Controller
     public function show($id)
     {
         //
-        $dataComics = Comic::findOrFail($id);
-            return view('comics.show', compact('dataComics'));
 
     }
 

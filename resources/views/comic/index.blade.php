@@ -20,11 +20,10 @@
                 <div>
                     <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                     <h3>{{ $comic->title }}</h3>
-                </div>
-                <div class="dg-btn">
-                    <button>
-                        <a href="{{ route('comic.show', $comic->id) }}">Scopri di più</a>
-                    </button>
+                    <h4>{{ $comic->series }}</h4>
+                    <p>{{ $comic->type }}</p>
+                    <p>{{ $comic->price }}</p>
+                    <p>{{ $comic->sale_date }}</p>
                 </div>
             @empty
                 Non ci sono fumetti
