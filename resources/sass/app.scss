@@ -7,13 +7,24 @@
 }
 
 .container-card {
-   width: 20%;
-
-   .dg-btn {
-       background-color: aliceblue;
-        a {
-            font-size: 0.7rem;
-            color: #0789;
-        }
-   }
+   display: flex;
 }
+   .dg-btn {
+       background-color: transparent;
+       border: 2px solid rgb(24, 105, 192);
+       font-size: 0.7rem;
+       padding: 5px 10px;
+       font-weight: 700;
+
+       a {
+           text-decoration: none;
+       }
+   }
+
+   img {
+       width: 250px;
+   }
+
+   .dg-description {
+       width: 50%;
+   }
