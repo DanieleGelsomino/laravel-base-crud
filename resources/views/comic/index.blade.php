@@ -14,16 +14,17 @@
 
 </body>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col">
+    <div class="">
+        <div class="container-card">
             @forelse ($comics as $comic)
-                <div>
+                <div class="">
                     <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
-                    <h3>{{ $comic->title }}</h3>
-                    <h4>{{ $comic->series }}</h4>
-                    <p>{{ $comic->type }}</p>
-                    <p>{{ $comic->price }}</p>
-                    <p>{{ $comic->sale_date }}</p>
+                    <h3 class="pt-3">{{ $comic->title }}</h3>
+                </div>
+                <div class="mb-3">
+                    <button class="dg-btn">
+                        <a href="{{ route('comic.show', $comic->id) }}">DETTAGLI</a>
+                    </button>
                 </div>
             @empty
                 Non ci sono fumetti
