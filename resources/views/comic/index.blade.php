@@ -27,12 +27,16 @@
                     <button class="dg-btn">
                         <a href="{{ route('comic.show', $comic->id) }}">DETTAGLI</a>
                     </button>
+                    <button class="dg-btn mt-3 mb-3">
+                        <a href="{{ route('comic.edit', $comic->id) }}">MODIFICA</a>
+                    </button>
                 </div>
+
             @empty
                 Non ci sono fumetti
             @endforelse
 
-            <button class="dg-btn mt-3 mb-5">
+            <button class="dg-btn mt-3 mb-3">
                 <a href="{{ route('comic.create') }}">AGGIUNGI</a>
             </button>
         </div>
