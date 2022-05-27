@@ -27,6 +27,7 @@ class ComicsController extends Controller
     public function create()
     {
         //
+
         return view('comic.create');
     }
 
@@ -46,7 +47,7 @@ class ComicsController extends Controller
         $newComic->save();
 
         // $id = $newComic->id;
-        return redirect()->route('comic.show');
+        return redirect()->route('comic.index');
 
     }
 
