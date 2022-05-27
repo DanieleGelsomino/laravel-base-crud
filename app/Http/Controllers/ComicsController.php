@@ -93,7 +93,7 @@ class ComicsController extends Controller
         $comics->fill($data);
         $comics->update();
 
-        return redirect()->route('comic.show', compact('comics'));
+        return redirect()->route('comic.show', ['comic'=>$comics]);
     }
 
     /**
