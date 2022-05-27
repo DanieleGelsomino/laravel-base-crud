@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <title>Document</title>
+    <title>Details</title>
 </head>
 
 <body>
@@ -28,6 +28,11 @@
                 <button class="dg-btn mb-3">
                     <a href="{{ route('comic.index') }}">INDIETRO</a>
                 </button>
+                <form action="{{ route('comic.destroy', $comics->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <input class="dg-btn" type="submit" value="Elimina">
+                </form>
             </div>
         </div>
 </body>
