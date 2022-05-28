@@ -28,7 +28,7 @@
     </div>
     <div>
         <label for="description">Description:</label>
-        <textarea name="descrtiption" id="" cols="30" rows="5">{{ $comics->description }}</textarea>
+        <textarea name="description">{{ $comics->description }}</textarea>
     </div>
 
     <input type="submit" value="invia">
