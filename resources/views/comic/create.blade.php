@@ -27,7 +27,7 @@
     </div>
     <div>
         <label for="description">Description:</label>
-        <textarea name="descrtiption" id="" cols="30" rows="5"></textarea>
+        <textarea name="description" id="" cols="30" rows="5"></textarea>
     </div>
 
     <input type="submit" value="invia"></input>

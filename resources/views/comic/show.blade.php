@@ -31,7 +31,7 @@
                 <form action="{{ route('comic.destroy', $comics->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <input class="dg-btn" type="submit" value="Elimina">
+                    <input class="dg-btn delete-text" type="submit" value="Elimina">
                 </form>
             </div>
         </div>
