@@ -1,39 +1,56 @@
-<form action="{{ route('comic.store') }}" method="POST">
-    @csrf
+@extends('layouts.app')
 
-    <div>
-        <label for="title">Title:</label>
-        <input type="text" required name="title">
-    </div>
-    <div>
-        <label for=" series">Series:</label>
-        <input type="text" name="series">
-    </div>
-    <div>
-        <label for="type">Type:</label>
-        <input type="text" name="type">
-    </div>
-    <div>
-        <label for="thumb">Poster:</label>
-        <input type="text" name="thumb">
-    </div>
-    <div>
-        <label for="price">Price:</label>
-        <input type="text" name="price">
-    </div>
-    <div>
-        <label for="sale_date">On Sale:</label>
-        <input type="date" name="sale_date">
-    </div>
-    <div>
-        <label for="description">Description:</label>
-        <textarea name="description" id="" cols="30" rows="5"></textarea>
-    </div>
+@section('title')
+    Create
+@endsection
 
-    <input type="submit" value="invia"></input>
-</form>
-<div class="mb-5">
-    <button class="dg-btn mb-3">
-        <a href="{{ route('comic.index') }}">INDIETRO</a>
-    </button>
-</div>
+@section('content')
+    <h1 class="text-center mt-3 mb-5 text-primary">Crea Nuovo Fumettto</h1>
+    <form action="{{ route('comic.store') }}" method="POST">
+        @csrf
+        <div class="row justify-content-center mb-2">
+            <div class="col-3">
+                <label for="title" class="form-label">Title:</label>
+                <input type="text" class="form-control" required name="title">
+            </div>
+            <div class="col-3">
+                <label for=" series" class="form-label">Series:</label>
+                <input type="text" class="form-control" name="series">
+            </div>
+        </div>
+        <div class="row justify-content-center mb-2">
+            <div class="col-3">
+                <label for="type" class="form-label">Type:</label>
+                <input type="text" class="form-control" name="type">
+            </div>
+            <div class="col-3">
+                <label for="thumb" class="form-label">Poster:</label>
+                <input type="text" class="form-control" name="thumb">
+            </div>
+        </div>
+        <div class="row justify-content-center mb-2">
+            <div class="col-3">
+                <label for="price" class="form-label">Price:</label>
+                <input type="text" class="form-control" name="price">
+            </div>
+            <div class="col-3">
+                <label for="sale_date" class="form-label">On Sale:</label>
+                <input type="date" class="form-control" name="sale_date">
+            </div>
+        </div>
+        <div class="row justify-content-center mb-2">
+            <div class="col-6">
+                <label for="description" class="form-label">Description:</label>
+                <textarea class="form-control" name="description" id="" cols="30" rows="5"></textarea>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <input class="mb-3 mt-5 dg-btn text-primary text-uppercase col-1" type="submit" value="invia">
+        </div>
+    </form>
+    <div class="row justify-content-center">
+        <button class="col-1 dg-btn mb-3">
+            <a href="{{ route('comic.index') }}">INDIETRO</a>
+        </button>
+    </div>
+@endsection
